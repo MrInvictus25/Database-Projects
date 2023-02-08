@@ -73,15 +73,3 @@ CALL showAvailableUnits('F2-12-1');
 CALL showAvailableUnits('F2-8-11');
 
 
-
-/* TESTING
-
--- SELECT SUBSTRING_INDEX(FireLocation, ':', 1),SUBSTRING_INDEX(FireLocation, ':', -1), 
-	-- SUBSTRING_INDEX(UnitLocation, ':', 1),SUBSTRING_INDEX(UnitLocation, ':', -1) FROM availability; #WHERE FireID = ActiveFireID;
-
-
-	-- SELECT CONCAT(ROUND(SQRT(POW(SUBSTRING_INDEX(FireLocation, ':', 1) - SUBSTRING_INDEX(UnitLocation, ':', 1),2) + 
-	-- POW(SUBSTRING_INDEX(FireLocation, ':', -1) - SUBSTRING_INDEX(UnitLocation, ':', -1),2)),2)) FROM availability;
-
-
-*/
