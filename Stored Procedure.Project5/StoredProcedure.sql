@@ -1,8 +1,3 @@
-/* 
-Within your Jupyter Notebook, create the stored procedure calculateStrategic which
-accepts only a country abbreviation, creates the table strategicAnalysis as shown
-below, and display the first 20 rows of the table.
-*/
 
 USE asteroids;
 
