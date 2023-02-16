@@ -1,16 +1,3 @@
-/*
- Task 1: Entity Generation
-
-- Create the function traducerAgent that accepts no parameters and returns an SQL-formatted
-string that represents a traducer based on the information on slide 3.
-
-- Create the function desciminatorAgent that accepts no parameters and returns an SQL-
-formatted string that represents a discriminator based on the information on slide 4.
-
-- Create the function resourceBuilder that accepts no parameters and returns an SQL-formatted
-string that represents a resource based on the information on slide 5.
-*/
-
 DROP DATABASE IF EXISTS AggressorPlanning;
 CREATE DATABASE AggressorPlanning;
 Use AggressorPlanning;
@@ -234,12 +221,6 @@ END //
 DELIMITER ;
 SELECT resourceBuilder() AS 'INV 3';
 
-/*
-Task 2: Database Generation
-Create the stored procedure buildAggressor that builds the database aggressor_system as shown below.
-
-*/
-
 
 DROP PROCEDURE IF EXISTS buildAggressor;
 DELIMITER //
@@ -292,13 +273,6 @@ DELIMITER ;
 CALL buildAggressor();
 
 
-/*
-Task 3: Database Population
-Create the stored procedure aggressorPopulator that accepts the number of traducer records, discriminator records, and resource records and populates the database 
-aggressor_system with the specified number, which have been generated using the functions defined in slide 6.
-
-*/
-
 
 DROP PROCEDURE IF EXISTS aggressorPopulator;
 DELIMITER //
@@ -346,16 +320,6 @@ DELIMITER ;
 CALL aggressorPopulator(100,100,25);
 
 
-/*
-
-Task 4: Data Analysis 
-*Modify your build_aggressor to remove the primary keys from the aggressor_system database.
-*Build 100 traducers 100 discriminators 25 resource records.
-
-Create the stored procedure TD_analysis that accepts no parameters and produces the analysis
-of the traducer and discriminator records in the format shown below.
-
-*/
 
 
 DROP PROCEDURE IF EXISTS TD_analysis;
@@ -523,16 +487,6 @@ END //
 DELIMITER ;
 
 CALL TD_analysis();
-
-
-/*
-
-Create the stored procedure RemoveDuplicates that accepts no parameters and removes all
-duplicate Traducers (TID), Discriminators (DID), and Resources(RID) from their associated tables.
-* Your stored procedure must make use of a cursor for all data retrieval and must utilize the
-Delete command for duplicate record removal.
-
-*/
 
 
 DROP PROCEDURE IF EXISTS RemoveDuplicates;
