@@ -1,11 +1,3 @@
-/*
-Create the stored procedure asteroid_prospectus which accepts a country name and an
-asteroid designation and calculates the closest and most distant asteroid, belonging to
-the specified country, to the specified asteroid. Additionally, the procedure provides an
-analysis of the asteroid’s composition based on the following rules. */
-
-
-
 USE asteroids;
 
 DROP PROCEDURE IF EXISTS asteroid_prospectus;
@@ -49,11 +41,8 @@ BEGIN
 	JOIN spatialCoord sp ON reg.Designation = sp.Designation WHERE reg.Designation != Design and reg.Country = CountryName;
 
 
-	#* FROM spatialCoord WHERE Designation != Design and Country = CountryName;
-
-    # X AS X1, Y AS Y1, Z AS Z1, Designation
+ 
 	OPEN cursor_Inv;
-	#SELECT FOUND_ROWS() INTO row_count;
 	SET counter = 0;
 	SET row_count = FOUND_ROWS();
 	WHILE counter < row_count DO
@@ -79,10 +68,7 @@ BEGIN
 			SET MostDistance = Dist;
 			SET Far = A;
 			END IF;
-			#SET MostDistance = CONCAT(ROUND(SQRT(POW(ABS(X - X1), 2) + POW(ABS(Y - Y1), 2) + POW(ABS(Z - Z1), 2)), 2))
-			
-			#SELECT CONCAT(ROUND(SQRT(POW(ABS(X - X1), 2) + POW(ABS(Y - Y1), 2) + POW(ABS(Z - Z1), 2)), 2)) AS INV;
-			#SELECT CONCAT(Dist, ' ', CloseDistance) as dfdf;
+
 			SET CounterLoop = CounterLoop + 1;
 			
 		END WHILE;
