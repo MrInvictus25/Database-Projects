@@ -2,13 +2,13 @@
  Task 1: Entity Generation
 
 - Create the function traducerAgent that accepts no parameters and returns an SQL-formatted
-string that represents a traducer based on the information on slide 3.
+string that represents a traducer.
 
 - Create the function desciminatorAgent that accepts no parameters and returns an SQL-
-formatted string that represents a discriminator based on the information on slide 4.
+formatted string that represents a discriminator.
 
 - Create the function resourceBuilder that accepts no parameters and returns an SQL-formatted
-string that represents a resource based on the information on slide 5.
+string that represents a resource.
 */
 
 DROP DATABASE IF EXISTS AggressorPlanning;
@@ -236,7 +236,7 @@ SELECT resourceBuilder() AS 'INV 3';
 
 /*
 Task 2: Database Generation
-Create the stored procedure buildAggressor that builds the database aggressor_system as shown below.
+Create the stored procedure buildAggressor that builds the database aggressor_system.
 
 */
 
@@ -295,7 +295,7 @@ CALL buildAggressor();
 /*
 Task 3: Database Population
 Create the stored procedure aggressorPopulator that accepts the number of traducer records, discriminator records, and resource records and populates the database 
-aggressor_system with the specified number, which have been generated using the functions defined in slide 6.
+aggressor_system with the specified number, which have been generated using the functions.
 
 */
 
@@ -353,7 +353,7 @@ Task 4: Data Analysis
 *Build 100 traducers 100 discriminators 25 resource records.
 
 Create the stored procedure TD_analysis that accepts no parameters and produces the analysis
-of the traducer and discriminator records in the format shown below.
+of the traducer and discriminator records.
 
 */
 
